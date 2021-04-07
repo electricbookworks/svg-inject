@@ -150,7 +150,7 @@
     var idSuffix = ID_SUFFIX + uniqueIdCounter++;
     // Regular expression for functional notations of an IRI references. This will find occurences in the form
     // url(#anyId) or url("#anyId") (for Internet Explorer) and capture the referenced ID
-    var funcIriRegex = /url\("?#([a-zA-Z][\w:.-]*)"?\)/g;
+    var funcIriRegex = /url\("?#([a-zA-Z][\w:.=-]*)"?\)/g;
     // Get all elements with an ID. The SVG spec recommends to put referenced elements inside <defs> elements, but
     // this is not a requirement, therefore we have to search for IDs in the whole SVG.
     var idElements = svgElem.querySelectorAll('[id]');
